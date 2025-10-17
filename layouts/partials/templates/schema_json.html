@@ -77,19 +77,19 @@
   "articleBody": {{ .Content | safeJS | htmlUnescape | plainify }},
   "wordCount" : "{{ .WordCount }}",
   "inLanguage": {{ .Language.Lang | default "en-us" }},
-  {{ if .Params.cover.image -}}
+  {{- if .Params.cover.image -}}
   "image":
     {{- if (ne .Params.cover.relative true) -}}
-    {{ .Params.cover.image | absURL }},
+    {{ .Params.cover.image | absURL }}
     {{- else -}}
-    {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }},
-    {{- end}}
-  {{- else }}
+    {{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}
+    {{- end}},
+  {{- else if (partial "templates/_funcs/get-page-images" .) -}}
     {{- $images := partial "templates/_funcs/get-page-images" . -}}
     {{- with index $images 0 -}}
   "image": {{ .Permalink }},
     {{- end }}
-  {{- end -}}
+  {{- end }}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
   {{- with (.Params.author | default site.Params.author) }}
@@ -112,7 +112,7 @@
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
-  },
+  }
   "publisher": {
     "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
     "name": {{ site.Title }},
