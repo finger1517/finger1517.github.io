@@ -17,9 +17,9 @@
   {{- end }},
   "sameAs": [
     {{- if site.Params.schema.sameAs -}}
-      {{- range $i, $e := site.Params.schema.sameAs -}}{{- if $i }}, {{ end -}}{{ $e | trim | jsonify }}{{- end -}}
+      {{- range $i, $e := site.Params.schema.sameAs -}}{{- if $i }}, {{ end -}}{{ trim $e " " | jsonify }}{{- end -}}
     {{- else -}}
-      {{- range $i, $e := site.Params.SocialIcons -}}{{- if $i }}, {{ end -}}{{ $e.url | trim | safeURL | jsonify }}{{- end -}}
+      {{- range $i, $e := site.Params.SocialIcons -}}{{- if $i }}, {{ end -}}{{ trim $e.url " " | safeURL | jsonify }}{{- end -}}
     {{- end -}}
   ]
 }
@@ -51,7 +51,7 @@
       {{- $wrote = true -}}
     {{- end -}}
   {{- end -}}
-  {{- if (ge (len $bc_list) 2) -}}{{- if $wrote }},{{ end -}}{{- end -}}
+  {{- if $wrote }},{{- end -}}
   {
     "@type": "ListItem",
     "position": {{ len $bc_list }},
