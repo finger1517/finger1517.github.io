@@ -8,26 +8,38 @@ params:
   env: production
   description: "Personal homepage & portfolio"
   author: finger1517
+  ShowToc: true
+  math:
+    enable: true
+    useScriptTags: true
+    sectionDelimiter: $$
+    delimiters:
+      - left: $$ 
+        right: $$
+        display: true
+      - left: $ 
+        right: $ 
+        display: false
 
-  # 首页信息
-  homeInfoParams:
-    Title: "Hi there 👋"
-    Content: |
-      Welcome to my personal homepage.
-      This is where I share my thoughts, projects, and experiences.
+# 首页信息
+homeInfoParams:
+  Title: "Hi there 👋"
+  Content: |
+    Welcome to my personal homepage.
+    This is where I share my thoughts, projects, and experiences.
 
-  # 社交链接
-  socialIcons:
-    - name: github
-      url: "https://github.com/finger1517"
+# 社交链接
+socialIcons:
+  - name: github
+    url: "https://github.com/finger1517"
 
-  # 显示设置
-  ShowReadingTime: true
-  ShowShareButtons: false
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
+# 显示设置
+ShowReadingTime: true
+ShowShareButtons: false
+ShowPostNavLinks: true
+ShowBreadCrumbs: true
+ShowCodeCopyButtons: true
+ShowRssButtonInSectionTermList: true
 
 # 菜单配置
 menu:
