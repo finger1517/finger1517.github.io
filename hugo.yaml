@@ -1,0 +1,62 @@
+baseURL: https://finger1517.github.io/
+languageCode: en-us
+title: finger1517
+theme: ["PaperMod"]
+
+# PaperMod 配置
+params:
+  env: production
+  description: "Personal homepage & portfolio"
+  author: finger1517
+  ShowToc: true
+  math:
+    enable: true
+    useScriptTags: true
+    sectionDelimiter: $$
+    delimiters:
+      - left: $$ 
+        right: $$
+        display: true
+      - left: $ 
+        right: $ 
+        display: false
+
+# 首页信息
+homeInfoParams:
+  Title: "Hi there 👋"
+  Content: |
+    Welcome to my personal homepage.
+    This is where I share my thoughts, projects, and experiences.
+
+# 社交链接
+socialIcons:
+  - name: github
+    url: "https://github.com/finger1517"
+
+# 显示设置
+ShowReadingTime: true
+ShowShareButtons: false
+ShowPostNavLinks: true
+ShowBreadCrumbs: true
+ShowCodeCopyButtons: true
+ShowRssButtonInSectionTermList: true
+
+# 菜单配置
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 30
+
+# 其他设置
+enableRobotsTXT: true
+enableEmoji: true
