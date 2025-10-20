@@ -7,7 +7,6 @@ categories: ["AI","DeepMind"]
 author: "finger1517"
 description: "戴爵士的路"
 toc: true
-image: "/images/demis-hassabis.jpg"
 ---
 
 ## Lex PodCast Introduction

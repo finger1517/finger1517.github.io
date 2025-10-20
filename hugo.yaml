@@ -52,10 +52,14 @@ menu:
       name: About
       url: /about/
       weight: 20
-    - identifier: posts
-      name: Posts
-      url: /posts/
+    - identifier: report
+      name: Report
+      url: /reports/
       weight: 30
+    - identifier: share
+      name: Share
+      url: /shares/
+      weight: 40
 
 # 其他设置
 enableRobotsTXT: true

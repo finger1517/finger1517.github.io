@@ -8,8 +8,8 @@ This is a simple homepage built with Hugo and the PaperMod theme, keeping the cl
 
 ## What you'll find here
 
-- **Blog Posts**: My thoughts, tutorials, and experiences
-- **Projects**: Code and creative work I'm working on
+- **Report**: My tech writings, tutorials, and AI explorations
+- **Share**: Personal thoughts, life experiences, and daily reflections
 - **About**: More information about me
 
 Feel free to explore and get in touch!
